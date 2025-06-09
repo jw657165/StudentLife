@@ -1,0 +1,60 @@
+-- Drop tables if they already exist (to avoid conflicts)
+DROP TABLE IF EXISTS user_assignments;
+DROP TABLE IF EXISTS user_timetable;
+DROP TABLE IF EXISTS user_papers;
+DROP TABLE IF EXISTS papers;
+DROP TABLE IF EXISTS users;
+
+-- USERS table
+CREATE TABLE users (
+  uid INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+
+-- PAPERS table
+CREATE TABLE papers (
+  pid INT AUTO_INCREMENT PRIMARY KEY,
+  paper_code VARCHAR(25) NOT NULL UNIQUE,
+  paper_name VARCHAR(255) NOT NULL,
+  description TEXT,
+  paper_type ENUM('COMPULSORY', 'STREAM', 'PLACEMENT', 'ELECTIVE_1', 'ELECTIVE_MATHS', 'ELECTIVE_COMPUTING', 'ELECTIVE_3', 'ELECTIVE_4', 'STREAM_ELECTIVE'),
+  year ENUM('1', '2', '3', '4')
+);
+
+-- USER_PAPERS (link table)
+CREATE TABLE user_papers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  uid INT,
+  pid INT,
+  is_active TINYINT(1) DEFAULT 0,
+  FOREIGN KEY (uid) REFERENCES users(uid) ON DELETE CASCADE,
+  FOREIGN KEY (pid) REFERENCES papers(pid) ON DELETE CASCADE
+);
+
+-- USER_TIMETABLE table
+CREATE TABLE user_timetable (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  uid INT,
+  pid INT,
+  name VARCHAR(255),
+  day VARCHAR(10),
+  start_time TIME,
+  end_time TIME,
+  description TEXT,
+  is_active TINYINT(1) DEFAULT 1,
+  FOREIGN KEY (uid) REFERENCES users(uid) ON DELETE CASCADE,
+  FOREIGN KEY (pid) REFERENCES papers(pid) ON DELETE CASCADE
+);
+
+-- USER_ASSIGNMENTS table
+CREATE TABLE user_assignments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  uid INT,
+  pid INT,
+  name VARCHAR(100),
+  weight DECIMAL(5,2),
+  grade DECIMAL(5,2),
+  FOREIGN KEY (uid) REFERENCES users(uid) ON DELETE CASCADE,
+  FOREIGN KEY (pid) REFERENCES papers(pid) ON DELETE CASCADE
+);
