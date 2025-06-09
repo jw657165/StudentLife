@@ -1,0 +1,100 @@
+ALTER TABLE papers AUTO_INCREMENT = 1;
+
+-- YEAR 1
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('ENGEN170', 'Engineering and Society', 'Internal:External = 50:50', 'COMPULSORY', 1),
+('ENGEN180', 'Foundations of Engineering', 'Internal:External = 50:50', 'COMPULSORY', 1),
+('ENGEN101', 'Engineering Maths and Modelling 1A', 'Internal:External = 50:50', 'COMPULSORY', 1),
+('ENGEN102', 'Engineering Maths and Modelling 1B', 'Internal:External = 50:50', 'COMPULSORY', 1),
+('COMPX101', 'Introduction to Programming', 'Internal:External = 67:33 or 33:67 (whichever is favorable)', 'STREAM', 1),
+('COMPX102', 'Object-Oriented Programming', 'Internal:External = 67:33 or 33:67 (whichever is favorable)', 'STREAM', 1),
+('MATHS135', 'Discrete Structures', 'Internal:External = 50:50', 'STREAM', 1);
+
+-- YEAR 2
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('ENGEN270', 'Engineering and Business', 'Internal:External = 100:0', 'COMPULSORY', 2),
+('COMPX225', 'Introduction to Databases and Web Development', 'Internal:External = 100:0', 'STREAM', 2),
+('COMPX230', 'Computer Hardware and Microprocessors', 'Internal:External = 50:50', 'STREAM', 2),
+('COMPX234', 'Systems and Networking', 'Internal:External = 50:50', 'STREAM', 2),
+('COMPX241', 'Software Engineering Design 1', 'Internal:External = 100:0', 'STREAM', 2),
+('COMPX242', 'Software Engineering Design 2', 'Internal:External = 100:0', 'STREAM', 2),
+('ENGEN271 or ENGEN272', 'Engineering Work Placement 1', 'Internal:External = 100:0', 'PLACEMENT', 2);
+
+-- YEAR 3
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('ENGEN370', 'Engineering and the Environment', 'Internal:External = 100:0', 'COMPULSORY', 3),
+('COMPX361', 'Logic and Computation', 'Internal:External = 50:50', 'STREAM', 3),
+('COMPX301', 'Design and Analysis of Algorithms', 'Internal:External = 100:0', 'STREAM', 3),
+('COMPX324', 'User Experience Design', 'Internal:External = 67:33', 'STREAM', 3),
+('COMPX341', 'Software Engineering Methods', 'Internal:External = 100:0', 'STREAM', 3),
+('COMPX374', 'Software Engineering Industry Project', 'Internal:External = 100:0', 'STREAM', 3),
+('ENGEN371 or ENGEN372', 'Engineering Work Placement 2', 'Internal:External = 100:0', 'PLACEMENT', 3);
+
+-- YEAR 4
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('ENGEN570', 'Engineering and the Profession', 'Internal:External = 100:0', 'COMPULSORY', 4),
+('ENGEN582', 'Honours Research and Development Project (45 points)', 'Internal:External = 100:0', 'COMPULSORY', 4);
+
+-- Year 1 Electives
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('APHYS111', 'Physics in Context - Ahupūngao o te Ao', 'Internal:External = 60:40', 'ELECTIVE_1', 1),
+('CHEMY100', 'Chemistry in Context - Matū o te Ao', 'Internal:External = 70:30', 'ELECTIVE_1', 1),
+('CHEMY101', 'Structure and Spectroscopy - Tūramaramatia i ngā Hanganga', 'Internal:External = 60:40', 'ELECTIVE_1', 1),
+('CHEMY102', 'Chemical Reactivity - Tauhohehohe Matū', 'Internal:External = 60:40', 'ELECTIVE_1', 1),
+('CSMAX175', 'Introduction to Cyber Security', 'Internal:External = 100:0', 'ELECTIVE_1', 1),
+('ENGEN110', 'Engineering Mechanics', 'Internal:External = 50:50', 'ELECTIVE_1', 1),
+('ENGEN111', 'Electricity for Engineers', 'Internal:External = 50:50', 'ELECTIVE_1', 1),
+('ENGEN112', 'Materials Science and Engineering', 'Internal:External = 50:50', 'ELECTIVE_1', 1),
+('PHYSC100', 'General Physics', 'Internal:External = 50:50', 'ELECTIVE_1', 1),
+('DATAX111', 'Statistics for Science', 'Internal:External = 50:50', 'ELECTIVE_1', 1),
+('DATAX121', 'Introduction to Statistical Methods', 'Internal:External = 50:50', 'ELECTIVE_1', 1),
+('COMPX171', 'Introduction to Digital Professional Skills', 'Internal:External = 100:0', 'ELECTIVE_1', 1);
+
+-- Year 2 Maths Electives
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('ENGEN201', 'Engineering Maths and Modelling 2', 'Internal:External = 50:50', 'ELECTIVE_MATHS', 2),
+('MATHS201', 'Continuing Calculus', 'Internal:External = 50:50', 'ELECTIVE_MATHS', 2),
+('MATHS202', 'Linear Algebra', 'Internal:External = 50:50', 'ELECTIVE_MATHS', 2),
+('MATHS203', 'Differential Equations and Modelling', 'Internal:External = 50:50', 'ELECTIVE_MATHS', 2),
+('MATHS235', 'Discrete Mathematics', 'Internal:External = 50:50', 'ELECTIVE_MATHS', 2),
+('DATAX201', 'Practical Data Science', 'Internal:External = 100:0', 'ELECTIVE_MATHS', 2),
+('DATAX221', 'Statistical Data Analysis', 'Internal:External = 50:50', 'ELECTIVE_MATHS', 2),
+('DATAX222', 'Principles of Probability and Statistics', 'Internal:External = 60:40', 'ELECTIVE_MATHS', 2);
+
+-- Year 2 Computing Electives
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('COMPX216', 'Artificial Intelligence', 'Internal:External = 60:40', 'ELECTIVE_COMPUTING', 2),
+('COMPX271', 'Introduction to Software Development Methodologies', 'Internal:External = 100:0', 'ELECTIVE_COMPUTING', 2),
+('ENGEE281', 'Design of Smart Systems', 'Internal:External = 100:0', 'ELECTIVE_COMPUTING', 2);
+
+-- Year 3 Electives
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('COMPX304', 'Advanced Networking and Cyber Security', 'Internal:External = 100:0', 'ELECTIVE_3', 3),
+('COMPX307', 'Principles of Programming Languages', 'Internal:External = 100:0', 'ELECTIVE_3', 3),
+('COMPX310', 'Machine Learning', 'Internal:External = 100:0', 'ELECTIVE_3', 3),
+('COMPX322', 'Advanced Web Development', 'Internal:External = 100:0', 'ELECTIVE_3', 3),
+('COMPX323', 'Advanced Database Concepts', 'Internal:External = 100:0', 'ELECTIVE_3', 3),
+('COMPX349', 'Embedded Systems', 'Internal:External = 100:0', 'ELECTIVE_3', 3),
+('COMPX364', 'Cryptography and Number Theory', 'Internal:External = 100:0', 'ELECTIVE_3', 3),
+('COMPX367', 'Computational Mathematics', 'Internal:External = 65:35', 'ELECTIVE_3', 3),
+('ENGEE319', 'Smart Grids and the Internet of Things', 'Internal:External = 100:0', 'ELECTIVE_3', 3);
+
+-- Year 4 Specialised Software Engineering Design Electives
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('COMPX518', 'Cyber Security', 'Internal:External = 100:0', 'STREAM_ELECTIVE', 4),
+('COMPX519', 'Malware Analysis and Penetration Testing', 'Internal:External = 100:0', 'STREAM_ELECTIVE', 4),
+('COMPX527', 'Secure Cloud Application Engineering', 'Internal:External = 100:0', 'STREAM_ELECTIVE', 4),
+('COMPX532', 'Information Visualisation', 'Internal:External = 100:0', 'STREAM_ELECTIVE', 4),
+('COMPX539', 'Usability Engineering', 'Internal:External = 100:0', 'STREAM_ELECTIVE', 4),
+('COMPX553', 'Extremely Parallel Programming', 'Internal:External = 100:0', 'STREAM_ELECTIVE', 4),
+('COMPX554', 'Specification Languages and Models', 'Internal:External = 100:0', 'STREAM_ELECTIVE', 4);
+
+-- Year 4 Additional 500-Level Electives
+INSERT INTO papers (paper_code, paper_name, description, paper_type, year) VALUES
+('COMPX515', 'Security for Advanced Networks', 'Internal:External = 100:0', 'ELECTIVE_4', 4),
+('COMPX521', 'Interpretable Machine Learning', 'Internal:External = 100:0', 'ELECTIVE_4', 4),
+('COMPX523', 'Machine Learning for Data Streams', 'Internal:External = 100:0', 'ELECTIVE_4', 4),
+('COMPX525', 'Deep Learning', 'Internal:External = 100:0', 'ELECTIVE_4', 4),
+('COMPX555', 'Bioinformatics', 'Internal:External = 100:0', 'ELECTIVE_4', 4),
+('COMPX560', 'Turing Topics in Computer Science', 'Internal:External = 100:0', 'ELECTIVE_4', 4),
+('COMPX585', 'Preparation for Research in Computer Science', 'Internal:External = 100:0', 'ELECTIVE_4', 4);
