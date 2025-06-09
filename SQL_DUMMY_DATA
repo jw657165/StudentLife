@@ -1,0 +1,5 @@
+-- create a user
+INSERT INTO `users` (`uid`, `username`, `password`) VALUES (1, 'David', 'Awesome');
+
+-- link user with some papers
+INSERT INTO `user_papers` (`id`, `uid`, `pid`, `is_active`) VALUES (NULL, '1', '12', '1'), (NULL, '1', '15', '1'), (NULL, '1', '66', '1');
