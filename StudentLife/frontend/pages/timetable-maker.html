@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Timetable Maker</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- nav bar same order as index -->
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grade-calculator.html">Grade Calculator</a></li>
+        <li><a href="timetable-maker.html">Timetable Maker</a></li>
+        <li><a href="degree-planner.html">Degree Planner</a></li>
+        <li><a href="../login.html">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- heading for page -->
+    <h2 style="text-align: center;">Weekly Timetable</h2>
+
+
+    <!-- boxes for entering information about adding class -->
+    </div>
+        <h3 style="text-align: center;">Add Your Own Class</h3>
+        <div id="custom-class-form" class="form-row">
+        <input type="text" id="custom-name" placeholder="Class Name" required />
+
+        <!-- selected day drop down -->
+        <select id="custom-day" required>
+            <option value="">Day</option>
+            <option value="Mon">Mon</option>
+            <option value="Tue">Tue</option>
+            <option value="Wed">Wed</option>
+            <option value="Thu">Thu</option>
+            <option value="Fri">Fri</option>
+        </select>
+
+        <!-- selected start time drop down -->
+        <select id="custom-start-time" required>
+            <option value="">Start Time</option>
+            <option value="8">8 AM</option>
+            <option value="9">9 AM</option>
+            <option value="10">10 AM</option>
+            <option value="11">11 AM</option>
+            <option value="12">12 PM</option>
+            <option value="13">1 PM</option>
+            <option value="14">2 PM</option>
+            <option value="15">3 PM</option>
+            <option value="16">4 PM</option>
+            <option value="17">5 PM</option>
+            <option value="18">6 PM</option>
+            <option value="19">7 PM</option>
+        </select>
+
+        <!-- selected end time drop down -->
+        <select id="custom-end-time" required>
+            <option value="">End Time</option>
+            <option value="8">8 AM</option>
+            <option value="9">9 AM</option>
+            <option value="10">10 AM</option>
+            <option value="11">11 AM</option>
+            <option value="12">12 PM</option>
+            <option value="13">1 PM</option>
+            <option value="14">2 PM</option>
+            <option value="15">3 PM</option>
+            <option value="16">4 PM</option>
+            <option value="17">5 PM</option>
+            <option value="18">6 PM</option>
+            <option value="19">7 PM</option>
+        </select>
+
+        <!-- connect the add button to the js -->
+        <button onclick="handleAddCustomClass()">Add</button>
+    </div>    
+
+    <!-- container to hold the timetable -->
+    <div class="layout-row">
+    <div class="timetable-container">
+        <div id="timetable" class="timetable"></div>
+    </div>
+
+    <!-- container to hold the removed classes -->
+    <div class="removed-wrapper">
+        <h3>Removed Classes</h3>
+        <div id="removed-classes" class="removed-container"></div>
+    </div>
+
+  </main>
+
+  <script src="../js/timetable-maker.js"></script>
+</body>
+</html>
